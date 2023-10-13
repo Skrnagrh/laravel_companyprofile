@@ -9,11 +9,11 @@
     <div class="m-5">
         <div class="row">
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="work-box">
+                {{-- <div class="work-box"> --}}
                     <h1 style="font-size: 36px; font-family: Arial Narrow Bold p-3"><strong>A</strong>bout
                         <strong>M</strong>e
                     </h1>
-                </div>
+                {{-- </div> --}}
             </div>
             <div class="col-md-8">
                 <p data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -61,7 +61,7 @@
 
                         <div class="card-img-overlay"
                             style="background-image: linear-gradient(to top right, #000000, #00000027,  #00000000)">
-                            <h3 class="card-title">{{ $prospect->title }}</h3>
+                            <h3 class="card-title fs-5">{{ $prospect->title }}</h3>
                             <p class="card-text">Selengkapnya <i class="bi bi-arrow-right"></i></p>
                         </div>
                     </a>

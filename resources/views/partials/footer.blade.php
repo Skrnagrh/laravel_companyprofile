@@ -94,7 +94,7 @@
             <div class="row justify-content-between">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     <div class="copyright">
-                        © Copyright <strong><span>PT. Andro Mind Indonesia</span></strong>. All Rights Reserved
+                        © Copyright <strong><span>PT. Andro Mind Indonesia</span></strong>. <?= Date('Y'); ?>
                     </div>
                 </div>
                 <div class="col-md-6">

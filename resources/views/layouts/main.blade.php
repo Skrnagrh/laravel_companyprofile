@@ -90,6 +90,26 @@
             text-align: justify;
             letter-spacing: normal;
         }
+
+        /* Gaya untuk mode ponsel */
+        @media (max-width: 767px) {
+            .carousel-item img {
+                max-height: 300px;
+            }
+
+            h1.text-hero {
+                display: none;
+            }
+
+            p.text-hero {
+                display: none;
+            }
+
+            /* Atur margin-top untuk elemen carousel */
+            .carousel-item {
+                margin-top: 70px;
+            }
+        }
     </style>
 </head>
 

@@ -22,7 +22,7 @@ class StartupsSeeder extends Seeder
                 'slug' => 'unicorn',
                 'excerpt' => 'This is a sample excerpt for the startup article 1.',
                 'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate.',
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, culpa ',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
@@ -32,7 +32,7 @@ class StartupsSeeder extends Seeder
                 'slug' => 'decacorn',
                 'excerpt' => 'This is a sample excerpt for the startup article 2.',
                 'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate.',
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, culpa ',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
@@ -42,7 +42,7 @@ class StartupsSeeder extends Seeder
                 'slug' => 'hectocorn',
                 'excerpt' => 'This is a sample excerpt for the startup article 2.',
                 'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate.',
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, culpa ',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],

@@ -18,10 +18,10 @@ class WorksSeeder extends Seeder
         $works = [
             [
                 'user_id' => 1,
-                'title' => 'Sample Work Title 1',
-                'slug' => 'sample-work-title-1',
+                'title' => 'Lowongan Pekerjaan 1',
+                'slug' => 'lowongan-pekerjaan-1',
                 'image' => '',
-                'jobdesk' => 'This is a sample job desk for work 1.',
+                'jobdesk' => 'Lorem ipsum dolor sit amet. This is a sample job desk for work 1.',
                 'education' => 'Bachelor\'s Degree',
                 'gender' => 'Any',
                 'status' => 'Full-time',
@@ -33,10 +33,10 @@ class WorksSeeder extends Seeder
             ],
             [
                 'user_id' => 1,
-                'title' => 'Sample Work Title 2',
-                'slug' => 'sample-work-title-2',
+                'title' => 'Lowongan Pekerjaan 2',
+                'slug' => 'lowongan-pekerjaan-2',
                 'image' => '',
-                'jobdesk' => 'This is a sample job desk for work 2.',
+                'jobdesk' => 'Lorem ipsum dolor sit amet. This is a sample job desk for work 2.',
                 'education' => 'Master\'s Degree',
                 'gender' => 'Male',
                 'status' => 'Part-time',

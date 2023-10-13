@@ -1,86 +1,22 @@
 @extends('layouts.main')
 
-{{-- <style>
-    .icon-text {
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.5rem;
-    }
-
-    .bg-circle {
-        background-color: #00000088;
-        border-radius: 50%;
-        padding: 0.5rem;
-        font-size: 24px;
-        width: 45px;
-        height: 45px;
-        color: white;
-        margin-right: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .item-info {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .item-info p {
-        margin: 0;
-        font-family: 'Rajdhani', sans-serif;
-        font-size: 16px;
-        line-height: 25px;
-        text-align: left;
-        letter-spacing: normal;
-        font-weight: bold;
-    }
-
-    .item-info p:last-child {
-        font-family: 'Roboto', sans-serif;
-        font-size: 14px;
-        line-height: 25px;
-        text-align: left;
-        letter-spacing: normal;
-        font-weight: normal;
-    }
-
-    .title-style {
-        font-family: 'Rajdhani', sans-serif;
-        font-size: 30px;
-        line-height: 36px;
-        text-align: left;
-        letter-spacing: normal;
-    }
-
-    .text-justify {
-        font-family: 'Roboto', sans-serif;
-        font-size: 16px;
-        line-height: 27px;
-        text-align: justify;
-        letter-spacing: normal;
-    }
-</style> --}}
-
 @section('container')
-
-
 
 <div class="contiainer m-5">
 
-    @if (session()->has('success'))
-    <div class="alert alert-success" role="alert">
-        {{ session('success') }}
-        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"
-            stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-        </svg>
-        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    @endif
 
     <div class="row justify-content-center" style="margin-top: 150px;">
+        @if (session()->has('success'))
+        <div class="alert alert-success" role="alert">
+            {{ session('success') }}
+            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <button type="button" class="btn-close float-end" aria-label="Close"></button>
+        </div>
+        @endif
         <div class="col-md-7 mb-3">
             <h2 class="title-style"><strong>{{ $work->title }}</strong></h2>
             <p class="text-justify">Andro Mind adalah perusahaan manufaktur pembuat alat-alat uji Tanah, Beton, Aspal,

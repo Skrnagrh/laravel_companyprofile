@@ -60,8 +60,7 @@
                     <img src="{{ asset('storage/' . $work->image) }}" class="card-img" alt="{{ $work->name }}"
                         height="305px">
                     @else
-                    <img src="/notfound.png" class="card-img" alt="{{ $work->name }}"
-                        height="305px">
+                    <img src="/notfound.png" class="card-img" alt="{{ $work->name }}" height="305px">
                     @endif
 
                     <div class="row justify-content-center text-center">
@@ -84,21 +83,3 @@
     </div>
 </div>
 @endsection
-
-
-
-
-
-{{-- @foreach ($work as $work)
-<div class="row justify-content-center m-5">
-    <div class="col-md-10">
-        <a href="#">{{ $work->title }}</a>
-        <small>
-            <p>{{ $work->placement }}</p>
-        </small>
-    </div>
-    <div class="col-md-2">
-        <a class="btn btn-primary" href="/detail_work/{{ $work->slug }}"> Apply</a>
-    </div>
-</div>
-@endforeach --}}

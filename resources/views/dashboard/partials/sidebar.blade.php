@@ -1,73 +1,4 @@
-{{-- <div id="layoutSidenav_nav">
-    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-        <div class="sb-sidenav-menu">
-            <div class="nav">
-                <div class="sb-sidenav-menu-heading text-danger">Core</div>
-                <a class="nav-link  text-danger" href="/">
-                    <div class="sb-nav-link-icon text-danger"><i class="fas fa-tachometer-alt"></i></div>
-                    Home page
-                </a>
-                <a class="nav-link  text-danger" href="/dashboard">
-                    <div class="sb-nav-link-icon text-danger"><i class="fas fa-tachometer-alt"></i></div>
-                    Dashboard
-                </a>
-                <div class="sb-sidenav-menu-heading  text-danger">Interface</div>
-                <a class="nav-link collapsed  text-danger" href="#" data-bs-toggle="collapse"
-                    data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                    <div class="sb-nav-link-icon  text-danger"><i class="fas fa-columns"></i></div>
-                    Content
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-danger"></i></div>
-                </a>
-                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
-                    data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <li class="nav-item">
-                            <a class="nav-link {{ Request::is('dashboard/prospect*') ? 'active' : '' }} text-decoration-none text-danger"
-                                href="/dashboard/prospect">Jobs Prospect</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link{{ Request::is('dashboard/startup*') ? 'active' : '' }} text-decoration-none  text-danger"
-                                href="/dashboard/startup">Start up</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link{{ Request::is('dashboard/work*') ? 'active' : '' }} text-decoration-none  text-danger"
-                                href="/dashboard/work">Work</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link{{ Request::is('dashboard/news*') ? 'active' : '' }} text-decoration-none  text-danger"
-                                href="/dashboard/news"> News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link{{ Request::is('dashboard/apply*') ? 'active' : '' }} text-decoration-none  text-danger"
-                                href="/dashboard/apply">Apply</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link{{ Request::is('dashboard/categories*') ? 'active' : '' }} text-decoration-none  text-danger"
-                                href="/dashboard/categories">Categories</a>
-                        </li>
-                    </nav>
-                </div>
-                <a class="nav-link collapsed text-danger" href="#" data-bs-toggle="collapse"
-                    data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                    <div class="sb-nav-link-icon text-danger"><i class="fas fa-book-open text-danger"></i></div>
-                    Pages
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down text-danger"></i></div>
-                </a>
-                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
-                    data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-
-                        <a class="nav-link text-danger" href="/dashboard/register">Register</a>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div class="sb-sidenav-footer">
-        </div>
-    </nav>
-</div> --}}
-
-<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+{{-- <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
         <a href="/dashboard" class="app-brand-link">
             <img src="/img/logo/logo-title.png" alt="andromind" width="20%">
@@ -133,4 +64,137 @@
         </li>
 
     </ul>
+</aside> --}}
+
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link {{ Request::is('dashboard') ? 'active' : 'collapsed' }}" href="/dashboard">
+                <i class="bi bi-speedometer2"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li class="nav-heading">Data</li>
+
+        <li class="nav-item">
+            <a class="nav-link {{ Request::is('dashboard/categories*') || Request::is('dashboard/news*') || Request::is('dashboard/prospect*') || Request::is('dashboard/startup*') ? 'active' : 'collapsed' }}"
+                data-bs-target="#olah-data" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-menu-button-wide"></i><span>Olah Data</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="olah-data"
+                class="nav-content collapse {{ Request::is('dashboard/categories*') || Request::is('dashboard/news*') || Request::is('dashboard/prospect*') || Request::is('dashboard/startup*') ? 'show' : '' }}"
+                data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/dashboard/categories"
+                        class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : 'collapsed' }}">
+                        <i class="bi bi-circle"></i><span>Kategori</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/news"
+                        class="nav-link {{ Request::is('dashboard/news*') ? 'active' : 'collapsed' }}">
+                        <i class="bi bi-circle"></i><span>Berita</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/prospect"
+                        class="nav-link {{ Request::is('dashboard/prospect*') ? 'active' : 'collapsed' }}">
+                        <i class="bi bi-circle"></i><span>Prospect</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/startup"
+                        class="nav-link {{ Request::is('dashboard/startup*') ? 'active' : 'collapsed' }}">
+                        <i class="bi bi-circle"></i><span>Perusahaan</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-heading">Karir</li>
+
+        <li class="nav-item">
+            <a class="nav-link {{ Request::is('dashboard/work*') || Request::is('dashboard/apply*') ? 'active' : 'collapsed' }}"
+                data-bs-target="#data-karir" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-menu-button-wide"></i><span>Karir</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="data-karir"
+                class="nav-content collapse {{ Request::is('dashboard/work*') || Request::is('dashboard/apply*') ? 'show' : '' }}"
+                data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/dashboard/work"
+                        class="nav-link {{ Request::is('dashboard/work*') ? 'active' : 'collapsed' }}">
+                        <i class="bi bi-circle"></i><span>Lowongan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/apply"
+                        class="nav-link {{ Request::is('dashboard/apply*') ? 'active' : 'collapsed' }}">
+                        <i class="bi bi-circle"></i><span>Lamaran</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        {{-- <li class="nav-item">
+            <a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }} "
+                href="/dashboard/categories">
+                <i class="bi bi-grid"></i>
+                <span>Kategori</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link {{ Request::is('dashboard/news') ? 'active' : '' }}" href="/dashboard/news">
+                <i class="bi bi-grid"></i>
+                <span>Berita</span>
+            </a>
+        </li>
+
+        <li class="nav-item {{ Request::is('dashboard/prospect') ? 'active' : '' }}">
+            <a class="nav-link " href="/dashboard/prospect">
+                <i class="bi bi-grid"></i>
+                <span>Prospect</span>
+            </a>
+        </li>
+
+        <li class="nav-item {{ Request::is('dashboard/startup*') ? 'active' : '' }}">
+            <a class="nav-link " href="/dashboard/startup">
+                <i class="bi bi-grid"></i>
+                <span>Perusahaan</span>
+            </a>
+        </li>
+
+        <li class="nav-item {{ Request::is('dashboard/work') ? 'active' : '' }}">
+            <a class="nav-link " href="/dashboard/work">
+                <i class="bi bi-grid"></i>
+                <span>Pekerjaan</span>
+            </a>
+        </li>
+
+        <li class="nav-item {{ Request::is('dashboard/apply') ? 'active' : '' }}">
+            <a class="nav-link " href="/dashboard/apply">
+                <i class="bi bi-grid"></i>
+                <span>Lamaran</span>
+            </a>
+        </li> --}}
+
+    </ul>
+
 </aside>
+
+{{-- <li class="nav-item">
+    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
+    </a>
+    <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+            <a href="components-alerts.html">
+                <i class="bi bi-circle"></i><span>Alerts</span>
+            </a>
+        </li>
+    </ul>
+</li> --}}

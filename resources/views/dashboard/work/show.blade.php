@@ -2,7 +2,7 @@
 
 @section('title')Edit Karier @endsection
 
-@section('container')
+@section('content')
 <div class="m-3">
 
     <div class="col-md-12 mb-3">

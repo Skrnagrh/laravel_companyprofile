@@ -1,4 +1,4 @@
-@extends('dashboard.layouts.main')
+{{-- @extends('dashboard.layouts.main')
 
 @section('title')Edit Jobs Prospect @endsection
 
@@ -102,14 +102,15 @@
             e.preventDefault();
         })
 </script>
-@endsection
+@endsection --}}
 
-{{-- <form method="post" action="/dashboard/prospect" enctype="multipart/form-data">
-    <div class="modal fade" id="modalScrollable" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
+<form method="post" action="/dashboard/prospect" enctype="multipart/form-data">
+    @csrf
+    <div class="modal fade" id="modalTambah" tabindex="-1" aria-labelledby="modalTambahLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalScrollableTitle">Modal title</h5>
+                    <h1 class="modal-title fs-5" id="modalTambahLabel">Modal title</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -126,8 +127,8 @@
                     </div>
 
                     <div class="mb-3">
-                        <input type="" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug"
-                            required value="{{ old('slug') }}" placeholder="Slug">
+                        <input type="hidden" class="form-control @error('slug') is-invalid @enderror" id="slug"
+                            name="slug" required value="{{ old('slug') }}" disable placeholder="Slug">
                         @error('slug')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -148,29 +149,24 @@
                         </select>
                     </div>
 
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="/assets/img/avatars/1.png" alt="user-avatar" class="d-block rounded img-fluid"
-                                id="uploadedAvatar" />
-                        </div>
-                        <div class="col-md-6 d-flex flex-column justify-content-start justify-content-sm-center">
-                            <label for="upload" class="btn btn-primary mt-2" tabindex="0">
-                                <span class="d-none d-sm-block">Upload Image</span>
-                                <i class="bx bx-upload d-block"></i>
-                                <input type="file" id="upload" name="image" class="account-file-input" hidden
-                                    accept="image/png, image/jpeg" />
-                                @error('image')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                                @enderror
-                            </label>
-                            <button type="button" class="btn btn-outline-secondary mt-2 account-image-reset">
-                                <i class="bx bx-reset d-block"></i>
-                                <span class="d-none d-sm-block">Reset</span>
-                            </button>
-                        </div>
+                    <div class="mb-3">
+                        <img src="/assets/img/avatars/1.png" alt="user-avatar" class="d-block rounded img-fluid"
+                            id="uploadedAvatar">
+                        <label for="upload" class="btn btn-primary mt-2 btn-sm" tabindex="0">
+                            <span class="d-none d-sm-block">Upload Image</span>
+                            <i class="bx bx-upload d-block"></i>
+                            <input type="file" id="upload" name="image" class="account-file-input" hidden
+                                accept="image/png, image/jpeg">
+                            @error('image')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                        </label>
+                        <button type="button" class="btn btn-outline-secondary mt-2 account-image-reset btn-sm">
+                            <i class="bx bx-reset d-block"></i>
+                            <span class="d-none d-sm-block">Reset</span>
+                        </button>
                     </div>
 
                     <div class="mb-3">
@@ -179,18 +175,14 @@
                         <p class="text-danger">{{ $message }}</p>
                         @enderror
                         <input id="body" type="hidden" name="body" required value="{{ old('body') }}">
-                        <trix-editor input="body"></trix-editor>
+                        <trix-editor input="body" aria-placeholder="Body"></trix-editor>
                     </div>
-
                 </div>
-
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                        <i class="bi bi-x-circle"></i> Close
-                    </button>
-                    <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i> Save</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
                 </div>
             </div>
         </div>
     </div>
-</form> --}}
+</form>

@@ -1,9 +1,9 @@
-@extends('layouts.main')
+@extends('homepage.layouts.main')
 
 @section('container')
 
 {{-- Hero --}}
-@include('hero.startup')
+@include('homepage.hero.startup')
 
 {{-- Name Categories --}}
 <div class="container">

@@ -114,11 +114,11 @@
 </head>
 
 <body>
-    @include('partials.header')
+    @include('homepage.partials.header')
 
     @yield('container')
 
-    @include('partials.footer')
+    @include('homepage.partials.footer')
     <!-- Back To Top -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
         <i class="bi bi-arrow-up-circle"></i>

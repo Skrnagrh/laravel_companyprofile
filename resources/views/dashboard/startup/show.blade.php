@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.main')
 
-@section('container')
+@section('content')
     <div id="layoutSidenav" class="m-3">
         <div id="layoutSidenav_content">
             @include('dashboard.hero.startup')
@@ -16,7 +16,7 @@
                             <img src="https://source.unsplash.com/1200x400?{{ $startup->category->name }}"
                                 class="img-fluid mt-3" alt="{{ $startup->category->name }}">
                         @endif --}}
-                       
+
                         {{-- <a href="/dashboard/startup" class="btn btn-success"><span data-feather="arrow-left"></span> Back To My
                             startup</a>
                         <a href="/dashboard/startup/{{ $startup->slug }}/edit" class="btn btn-warning"><span

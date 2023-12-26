@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('homepage.layouts.main')
 
 @section('container')
 

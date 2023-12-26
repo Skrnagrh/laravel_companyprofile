@@ -1,9 +1,9 @@
-@extends('layouts.main')
+@extends('homepage.layouts.main')
 
 @section('container')
 
 {{-- Hero --}}
-@include('hero.detail_startup')
+@include('homepage.hero.detail_startup')
 
 <div class="row justify-content-center m-5">
     <div class="col-md-5">

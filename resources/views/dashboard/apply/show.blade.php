@@ -125,7 +125,7 @@
 
 <div class="modal fade" id="myModal{{ $apply->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">sender from {{ $apply->name }} To work {{ $apply->title
@@ -135,7 +135,7 @@
             <div class="modal-body">
                 <div class="row">
 
-                    <div class="col-md-5 mt-4">
+                    <div class="col-md-6 mt-4">
                         <div class="card card-info">
                             <div class="card-body p-0">
                                 <table class="table border">
@@ -179,7 +179,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-7">
+                    <div class="col-lg-6">
                         @if ($apply->cv)
                         <embed type="application/pdf" src="{{ asset('storage/' . $apply->cv) }}" width="100%"
                             height="400px" class="p-1" style="border-radius: 10px"></embed>
@@ -189,7 +189,6 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                {{-- <button type="button" class="btn btn-primary">Aksi Lain</button> --}}
             </div>
         </div>
     </div>

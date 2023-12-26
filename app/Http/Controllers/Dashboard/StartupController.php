@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Models\User;
 use App\Models\Startup;
@@ -9,21 +9,21 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
-
-class DashboardStartupController extends Controller
+class StartupController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Startup $startup)
     {
         return view('dashboard.startup.index', [
-            'startup' => Startup::where('user_id', auth()->user()->id)->get(),
-            'user' => User::all()
+            'perusahaan' => Startup::where('user_id', auth()->user()->id)->get(),
+            'user' => User::all(),
+            'startup' => $startup,
         ]);
     }
 
@@ -32,13 +32,13 @@ class DashboardStartupController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('dashboard.startup.create', [
-            'startup' => Startup::all(),
-            'user' => User::all()
-        ]);
-    }
+    // public function create()
+    // {
+    //     return view('dashboard.startup.create', [
+    //         'startup' => Startup::all(),
+    //         'user' => User::all(),
+    //     ]);
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -88,15 +88,15 @@ class DashboardStartupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Startup $startup)
-    {
-        // untuk edit data
-        return view('dashboard.startup.edit', [
-            'startup' => $startup,
-            'user' => User::all()
-            // 'startup' => Startup::all()
-        ]);
-    }
+    // public function edit(Startup $startup)
+    // {
+    //     // untuk edit data
+    //     return view('dashboard.startup.edit', [
+    //         'startup' => $startup,
+    //         'user' => User::all()
+    //         // 'startup' => Startup::all()
+    //     ]);
+    // }
 
     /**
      * Update the specified resource in storage.

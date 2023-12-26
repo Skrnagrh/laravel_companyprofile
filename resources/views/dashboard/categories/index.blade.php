@@ -42,15 +42,10 @@
                         <td><strong>{{ $loop->iteration }}</strong></td>
                         <td>{{ ucwords($categories->name) }}</td>
                         <td>
-                            {{-- <a href="/dashboard/categories/{{ $categories->slug }}/edit" class="btn btn-sm btn-warning">
-                                <i class=" bx bx-edit-alt me-1"></i> Edit
-                            </a> --}}
-
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-sm btn-warning text-white" data-bs-toggle="modal"
                                 data-bs-target="#modalEdit{{ $categories->slug }}">
-                                Launch demo modal
+                                <i class=" bx bx-edit-alt me-1"></i> Edit
                             </button>
-
 
 
                             <button class="btn btn-danger btn-sm" type="button" data-bs-toggle="modal"

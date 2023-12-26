@@ -1,22 +1,36 @@
 <?php
 
 use App\Models\User;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WorkController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\DetailController;
-use App\Http\Controllers\NavbarController;
-use App\Http\Controllers\StartupController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\AdminCategoryController;
-use App\Http\Controllers\AdminRegisterController;
-use App\Http\Controllers\DashboardNewsController;
-use App\Http\Controllers\DashboardUserController;
-use App\Http\Controllers\DashboardWorkController;
-use App\Http\Controllers\DashboardApplyController;
-use App\Http\Controllers\DashboardStartupController;
-use App\Http\Controllers\DashboardProspectController;
 use App\Models\Category;
+use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\WorkController;
+// use App\Http\Controllers\StartupController;
+// use App\Http\Controllers\AdminCategoryController;
+// use App\Http\Controllers\DashboardNewsController;
+// use App\Http\Controllers\DashboardWorkController;
+// use App\Http\Controllers\DashboardApplyController;
+// use App\Http\Controllers\DashboardStartupController;
+// use App\Http\Controllers\DashboardProspectController;
+
+// use App\Http\Controllers\DetailController;
+// use App\Http\Controllers\NavbarController;
+use App\Http\Controllers\LoginController;
+// use App\Http\Controllers\RegisterController;
+
+// Home
+use App\Http\Controllers\Home\DetailController;
+use App\Http\Controllers\Home\NavbarController;
+
+// use App\Http\Controllers\AdminRegisterController;
+// use App\Http\Controllers\DashboardUserController;
+
+// dashboard
+use App\Http\Controllers\Dashboard\NewsController;
+use App\Http\Controllers\Dashboard\ApplyController;
+use App\Http\Controllers\Dashboard\StartupController;
+use App\Http\Controllers\Dashboard\CategoryController;
+use App\Http\Controllers\Dashboard\ProspectController;
+use App\Http\Controllers\Dashboard\WorkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,10 +65,11 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 // Register
-Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
-Route::post('/register', [RegisterController::class, 'store']);
+// Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+// Route::post('/register', [RegisterController::class, 'store']);
 
 // Halaman Dashboard Admin
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard.index', [
@@ -65,30 +80,72 @@ Route::middleware(['auth'])->group(function () {
     });
 
     // Halaman Admin Kelola Berita
-    Route::resource('/dashboard/news', DashboardNewsController::class);
-    Route::get('/dashboard/newss/checkSlug', [DashboardNewsController::class, 'checkSlug']);
+    Route::resource('/dashboard/news', NewsController::class);
+    Route::get('/dashboard/newss/checkSlug', [NewsController::class, 'checkSlug']);
 
     // Halaman Jobs Prospect
-    Route::resource('/dashboard/prospect', DashboardProspectController::class);
-    Route::get('/dashboard/prospects/checkSlug', [DashboardProspectController::class, 'checkSlug']);
+    Route::resource('/dashboard/prospect', ProspectController::class);
+    Route::get('/dashboard/prospects/checkSlug', [ProspectController::class, 'checkSlug']);
 
     // Halaman Startup
-    Route::resource('/dashboard/startup', DashboardStartupController::class);
-    Route::get('/dashboard/startupss/checkSlug', [DashboardStartupController::class, 'checkSlug']);
+    Route::resource('/dashboard/startup', StartupController::class);
+    Route::get('/dashboard/startupss/checkSlug', [StartupController::class, 'checkSlug']);
 
     // Dashboard Work
-    Route::resource('/dashboard/work', DashboardWorkController::class);
-    Route::get('/dashboard/works/checkSlug', [DashboardWorkController::class, 'checkSlug']);
+    Route::resource('/dashboard/work', WorkController::class);
+    Route::get('/dashboard/works/checkSlug', [WorkController::class, 'checkSlug']);
 
-    Route::resource('/dashboard/user', DashboardUserController::class);
-
-    // Halaman Dashboard Admin
-    Route::resource('/dashboard/register', AdminRegisterController::class);
 
     // Halaman categories
-    Route::resource('/dashboard/categories', AdminCategoryController::class);
-    Route::get('/dashboard/categorie/checkSlug', [AdminCategoryController::class, 'checkSlug']);
+    Route::resource('/dashboard/categories', CategoryController::class);
+    Route::get('/dashboard/categorie/checkSlug', [CategoryController::class, 'checkSlug']);
 
     // Halaman apply work
-    Route::resource('/dashboard/apply', DashboardApplyController::class);
+    Route::resource('/dashboard/apply', ApplyController::class);
+
+
+    // Halaman Dashboard Admin
+    // Route::resource('/dashboard/user', DashboardUserController::class);
+    // Route::resource('/dashboard/register', AdminRegisterController::class);
 });
+
+
+
+
+// Route::middleware(['auth'])->group(function () {
+//     Route::get('/dashboard', function () {
+//         return view('dashboard.index', [
+//             "active" => 'dashboard',
+//             "user" => User::all(),
+//             "categories" => Category::get()->count()
+//         ]);
+//     });
+
+//     // Halaman Admin Kelola Berita
+//     Route::resource('/dashboard/news', DashboardNewsController::class);
+//     Route::get('/dashboard/newss/checkSlug', [DashboardNewsController::class, 'checkSlug']);
+
+//     // Halaman Jobs Prospect
+//     Route::resource('/dashboard/prospect', DashboardProspectController::class);
+//     Route::get('/dashboard/prospects/checkSlug', [DashboardProspectController::class, 'checkSlug']);
+
+//     // Halaman Startup
+//     Route::resource('/dashboard/startup', DashboardStartupController::class);
+//     Route::get('/dashboard/startupss/checkSlug', [DashboardStartupController::class, 'checkSlug']);
+
+//     // Dashboard Work
+//     Route::resource('/dashboard/work', DashboardWorkController::class);
+//     Route::get('/dashboard/works/checkSlug', [DashboardWorkController::class, 'checkSlug']);
+
+//     Route::resource('/dashboard/user', DashboardUserController::class);
+
+//     // Halaman Dashboard Admin
+//     Route::resource('/dashboard/register', AdminRegisterController::class);
+
+//     // Halaman categories
+//     Route::resource('/dashboard/categories', AdminCategoryController::class);
+//     Route::get('/dashboard/categorie/checkSlug', [AdminCategoryController::class, 'checkSlug']);
+
+//     // Halaman apply work
+//     Route::resource('/dashboard/apply', DashboardApplyController::class);
+// });

@@ -1,7 +1,7 @@
-@extends('layouts.main')
+@extends('homepage.layouts.main')
 
 @section('container')
-@include('hero.news_single')
+@include('homepage.hero.news_single')
 
 <div class="row justify-content-center m-5">
     <div class="col-md-5">

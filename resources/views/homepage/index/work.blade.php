@@ -1,7 +1,7 @@
-@extends('layouts.main')
+@extends('homepage.layouts.main')
 
 @section('container')
-@include('hero.work')
+@include('homepage.hero.work')
 
 <div class="m-5">
     <div class="row justify-content-center text-center">

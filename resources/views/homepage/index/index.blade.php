@@ -1,8 +1,8 @@
-@extends('layouts.main')
+@extends('homepage.layouts.main')
 
 @section('container')
 
-@include('hero.home')
+@include('homepage.hero.home')
 
 <!-- About -->
 <section id="about">

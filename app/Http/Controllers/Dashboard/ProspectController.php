@@ -1,30 +1,31 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
 
-use Illuminate\Http\Request;
-use App\Models\Prospect;
-use App\Models\Category;
 use App\Models\User;
+use App\Models\Category;
+use App\Models\Prospect;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
-
-class DashboardProspectController extends Controller
+class ProspectController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Prospect $prospect)
     {
         return view('dashboard.prospect.index', [
-            'prospect1' => Prospect::where('user_id', auth()->user()->id)->paginate(4)->withQueryString(),
+            'prospect1' => Prospect::where('user_id', auth()->user()->id)->paginate(10)->withQueryString(),
             'user' => User::all(),
             'categories' => Category::all(),
             'prospect' => Prospect::all(),
+            'prospect' => $prospect,
         ]);
     }
 
@@ -33,14 +34,14 @@ class DashboardProspectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('dashboard.prospect.create', [
-            'categories' => Category::all(),
-            'prospect' => Prospect::all(),
-            'user' => User::all()
-        ]);
-    }
+    // public function create()
+    // {
+    //     return view('dashboard.prospect.create', [
+    //         'categories' => Category::all(),
+    //         'prospect' => Prospect::all(),
+    //         'user' => User::all()
+    //     ]);
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -88,15 +89,15 @@ class DashboardProspectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Prospect $prospect)
-    {
-        // untuk edit data
-        return view('dashboard.prospect.edit', [
-            'prospect' => $prospect,
-            'categories' => Category::all(),
-            'user' => User::all()
-        ]);
-    }
+    // public function edit(Prospect $prospect)
+    // {
+    //     // untuk edit data
+    //     return view('dashboard.prospect.edit', [
+    //         'prospect' => $prospect,
+    //         'categories' => Category::all(),
+    //         'user' => User::all()
+    //     ]);
+    // }
 
     /**
      * Update the specified resource in storage.

@@ -1,29 +1,29 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Models\News;
 use App\Models\User;
 use App\Models\Category;
-use Illuminate\Http\Request;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
-
-
-
-class DashboardNewsController extends Controller
+class NewsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(News $news)
     {
         return view('dashboard.news.index', [
             'news1' => News::where('user_id', auth()->user()->id)->paginate(10)->withQueryString(),
+            'categories' => Category::all(),
+            'news' => $news,
             'user' => User::all()
         ]);
     }
@@ -33,13 +33,13 @@ class DashboardNewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('dashboard.news.create', [
-            'categories' => Category::all(),
-            'user' => User::all()
-        ]);
-    }
+    // public function create()
+    // {
+    //     return view('dashboard.news.create', [
+    //         'categories' => Category::all(),
+    //         'user' => User::all()
+    //     ]);
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -76,13 +76,13 @@ class DashboardNewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function show(News $news)
-    {
-        return view('dashboard.news.show', [
-            'news' => $news,
-            'user' => User::all()
-        ]);
-    }
+    // public function show(News $news)
+    // {
+    //     return view('dashboard.news.show', [
+    //         'news' => $news,
+    //         'user' => User::all()
+    //     ]);
+    // }
 
     /**
      * Show the form for editing the specified resource.

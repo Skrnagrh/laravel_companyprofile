@@ -1,8 +1,8 @@
-@extends('layouts.main')
+@extends('homepage.layouts.main')
 
 @section('container')
 {{-- Hero --}}
-@include('hero.news')
+@include('homepage.hero.news')
 
 
 {{-- serach --}}

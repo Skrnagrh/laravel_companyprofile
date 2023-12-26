@@ -66,12 +66,12 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="modalEditLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="modalEditLabel">Edit Kategori</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="name" class="form-label">Name Kategori</label>
+                        <label for="name" class="form-label">Nama Kategori</label>
                         <input type="text" class="form-control @error('name')
                   is-invalid
               @enderror" id="name" name="name" required autofocus value="{{ old('name', $categories->name) }}">

@@ -1,9 +1,9 @@
-@extends('layouts.main')
+@extends('homepage.layouts.main')
 
 @section('container')
 
 {{-- Hero --}}
-@include('hero.apply_work')
+@include('homepage.hero.apply_work')
 
 <div class="row justify-content-center m-5">
     <div class="col-md-8 work-box">

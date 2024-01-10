@@ -1,4 +1,4 @@
-# Laravel Landing Page
+# Laravel Company Profile
 
 Ini adalah proyek **Laravel Landing Page** yang sederhana dan dapat disesuaikan untuk membuat halaman landing page yang menarik untuk produk atau layanan Anda. Proyek ini menggunakan Laravel sebagai kerangka kerja utama.
 

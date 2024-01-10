@@ -2,7 +2,7 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="/img/hero/hero-slide-10.png" class="d-flex w-100" alt="home-slide-1.jpg">
+            <img src="/assets/home/img/hero/hero-slide-10.png" class="d-flex w-100" alt="home-slide-1.jpg">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="text-hero">Technology</h1>
@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/img/hero/hero-slide-11.png" class="d-flex w-100" alt="home-slide-2.jpg">
+            <img src="/assets/home/img/hero/hero-slide-11.png" class="d-flex w-100" alt="home-slide-2.jpg">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="text-hero">Technology</h1>
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/img/hero/hero-slide-12.png" class="d-flex w-100" alt="home-slide-3.jpeg">
+            <img src="/assets/home/img/hero/hero-slide-12.png" class="d-flex w-100" alt="home-slide-3.jpeg">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="text-hero">Technology</h1>

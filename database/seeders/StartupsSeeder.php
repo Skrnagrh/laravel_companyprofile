@@ -18,8 +18,8 @@ class StartupsSeeder extends Seeder
         $startups = [
             [
                 'user_id' => 1,
-                'title' => 'unicorn',
-                'slug' => 'unicorn',
+                'title' => 'AndroTech Solutions',
+                'slug' => 'AndroTech-Solutions',
                 'excerpt' => 'This is a sample excerpt for the startup article 1.',
                 'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, culpa ',
@@ -28,8 +28,8 @@ class StartupsSeeder extends Seeder
             ],
             [
                 'user_id' => 1,
-                'title' => 'decacorn',
-                'slug' => 'decacorn',
+                'title' => 'AndroHealth Solutions',
+                'slug' => 'AndroHealth-Solutions',
                 'excerpt' => 'This is a sample excerpt for the startup article 2.',
                 'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, culpa ',
@@ -38,8 +38,8 @@ class StartupsSeeder extends Seeder
             ],
             [
                 'user_id' => 1,
-                'title' => 'hectocorn',
-                'slug' => 'hectocorn',
+                'title' => 'AndroEdTech Ventures',
+                'slug' => 'AndroEdTech-Ventures',
                 'excerpt' => 'This is a sample excerpt for the startup article 2.',
                 'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem similique cumque fugiat quia reiciendis at ullam, ipsum, quisquam expedita a in enim nobis eaque repudiandae corrupti reprehenderit sed laboriosam voluptas eum? Perspiciatis natus quos quas maiores blanditiis cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, culpa ',

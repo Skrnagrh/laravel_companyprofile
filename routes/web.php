@@ -3,6 +3,7 @@
 use App\Models\User;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 // use App\Http\Controllers\WorkController;
 // use App\Http\Controllers\StartupController;
 // use App\Http\Controllers\AdminCategoryController;
@@ -14,23 +15,32 @@ use Illuminate\Support\Facades\Route;
 
 // use App\Http\Controllers\DetailController;
 // use App\Http\Controllers\NavbarController;
-use App\Http\Controllers\LoginController;
+// use App\Http\Controllers\LoginController;
 // use App\Http\Controllers\RegisterController;
 
 // Home
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\Home\DetailController;
-use App\Http\Controllers\Home\NavbarController;
 
 // use App\Http\Controllers\AdminRegisterController;
 // use App\Http\Controllers\DashboardUserController;
 
 // dashboard
+use App\Http\Controllers\Home\NavbarController;
+use App\Http\Controllers\AdminRegisterController;
+use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\Dashboard\NewsController;
+use App\Http\Controllers\Dashboard\WorkController;
 use App\Http\Controllers\Dashboard\ApplyController;
 use App\Http\Controllers\Dashboard\StartupController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\ProspectController;
-use App\Http\Controllers\Dashboard\WorkController;
+use App\Http\Controllers\Auth\LoginController as AuthLoginController;
+use App\Models\Apply;
+use App\Models\News;
+use App\Models\Prospect;
+use App\Models\Startup;
+use App\Models\Work;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,9 +70,9 @@ Route::post('/applywork', [DetailController::class, 'send_form']);
 
 // ini buat sudah login
 // login
-Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/login', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
+Route::get('/login', [AuthLoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [AuthLoginController::class, 'authenticate']);
+Route::post('/logout', [AuthLoginController::class, 'logout']);
 
 // Register
 // Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
@@ -75,7 +85,12 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard.index', [
             "active" => 'dashboard',
             "user" => User::all(),
-            "categories" => Category::get()->count()
+            "categories" => Category::get()->count(),
+            "news" => News::get()->count(),
+            "prospects" => Prospect::get()->count(),
+            "startups" => Startup::get()->count(),
+            "works" => Work::get()->count(),
+            "apply" => Apply::get()->count(),
         ]);
     });
 

@@ -7,28 +7,34 @@
 <!-- About -->
 <section id="about">
     <div class="m-5">
-        <div class="row">
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                {{-- <div class="work-box"> --}}
-                    <h1 style="font-size: 36px; font-family: Arial Narrow Bold p-3"><strong>A</strong>bout
-                        <strong>M</strong>e
-                    </h1>
-                {{-- </div> --}}
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <h1 style="font-size: 36px; font-family: Arial Narrow Bold p-3">Tentang Perusahaan </h1>
             </div>
-            <div class="col-md-8">
-                <p data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Incidunt, neque saepe quo, nulla harum a officia minus rem aut laborum laboriosam tenetur quis
-                    pariatur id consequuntur ea dicta unde. Similique temporibus aspernatur qui nam harum. Eveniet iste
-                    temporibus quaerat ipsa quisquam voluptatum numquam distinctio minus, quod aperiam, expedita omnis
-                    tempora.</p>
-                <p data-aos="fade-up" data-aos-delay="300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Eaque beatae ipsum harum excepturi veritatis suscipit! Eaque nostrum corporis officiis ipsam tempore
-                    ad doloribus deserunt rem amet magni. Dolore, ratione. Maiores ad consequuntur suscipit velit animi.
+            <div class="col-md-7">
+                <p>Andromind merupakan perusahaan yang bergerak di bidang
+                    teknologi, menjadi pionir dalam menciptakan solusi inovatif untuk memenuhi tuntutan masa depan.
+                    Dengan fokus pada pengembangan kecerdasan buatan (AI), Andromind berkomitmen untuk memberikan
+                    kontribusi signifikan dalam meredefinisi cara kita berinteraksi dengan teknologi.</p>
+                <p>
+                    Kata kunci utama yang melekat pada Andromind adalah "kecerdasan" dan "inovasi". Sebagai penggerak
+                    utama di dunia teknologi, perusahaan ini telah berhasil menghadirkan berbagai produk dan layanan
+                    unggulan yang mengubah cara kita bekerja, belajar, dan berkomunikasi.
                 </p>
-                <p data-aos="fade-up" data-aos-delay="400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Magni facere praesentium quae expedita, tempora harum eaque nihil, rerum repellendus ipsum alias
-                    earum debitis consequuntur saepe aliquam odit repellat enim delectus corrupti! Commodi, molestias
-                    culpa hic id alias dolorum illum exercitationem, aliquid, odio sit obcaecati provident.</p>
+                <p>
+                    Andromind menawarkan solusi AI yang canggih dan dapat disesuaikan, mencakup aplikasi berbasis
+                    kecerdasan buatan untuk sektor bisnis, pendidikan, kesehatan, dan lainnya. Melalui pendekatan yang
+                    holistik, Andromind memastikan bahwa teknologi yang dihasilkan tidak hanya efisien tetapi juga
+                    beretika, memperhatikan dampak positif bagi masyarakat dan lingkungan.</p>
+                <p>
+                    Dalam perjalanannya, Andromind terus mengembangkan teknologi baru, seperti integrasi teknologi
+                    wearable, pengolahan bahasa alami, dan analisis data tingkat tinggi. Semua ini bertujuan untuk
+                    menciptakan ekosistem teknologi yang lebih cerdas, responsif, dan terhubung.
+                </p>
+                <p>
+                    Andromind juga memegang teguh nilai-nilai keberlanjutan dan tanggung jawab sosial perusahaan. Dengan
+                    memahami bahwa teknologi dapat menjadi kekuatan positif untuk perubahan, perusahaan ini aktif
+                    berpartisipasi dalam berbagai inisiatif sosial dan lingkungan.</p>
             </div>
         </div>
     </div>
@@ -40,9 +46,7 @@
     <div class="m-4 py-5">
         <div class="row justify-content-center text-center text-light">
             <div class="col" data-aos="fade-up" data-aos-delay="100">
-                <h1 style="font-size: 36px; font-family: Arial Narrow Bold"><strong>J</strong>ob
-                    <strong>P</strong>rospects
-                </h1>
+                <h1 style="font-size: 36px; font-family: Arial Narrow Bold">Prospek Pekerjaan</h1>
             </div>
         </div>
         <div class="row">
@@ -79,14 +83,7 @@
         <div class="work-box">
             <div class="row mx-2 ">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <h1 style="font-size: 36px; font-family: Arial Narrow Bold"><strong>N</strong>ews</h1>
-                </div>
-                <div class="col-md-8" data-aos="fade-up" data-aos-delay="200">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique commodi nostrum culpa
-                        adipisci officiis, officia quas provident odit accusamus quidem sequi impedit laudantium? Iusto
-                        nobis labore, omnis dignissimos porro dolore inventore in animi atque exercitationem quo nostrum
-                        voluptate dolorem laboriosam eos perferendis quaerat! Rem numquam voluptate eum ipsum magnam.
-                        Blanditiis?</p>
+                    <h1 style="font-size: 36px; font-family: Arial Narrow Bold">Berita</h1>
                 </div>
             </div>
         </div>
@@ -94,17 +91,14 @@
             @foreach ($news as $news)
             <div class="col-md-4">
                 <div class="work-box mt-3" data-aos="fade-up" data-aos-delay="100">
-
                     <a href="/news/{{ $news->slug }}">
                         <div div class="work-img">
                             @if ($news->image)
-                            {{-- Untuk Gambar, Jika Ada Gambar Yang di Upload --}}
                             <img src="{{ asset('storage/' . $news->image) }}" class="img-fluid"
                                 alt="{{ $news->category->name }}">
                             @else
-                            {{-- Jika Gambar Tidak di Upload Oleh User Maka Akan Menampilkan dari Unsplash --}}
-                            <img src="https://source.unsplash.com/400x200?{{ $news->category->name }}"
-                                class="card-img-top" alt="{{ $news->category->name }}">
+                            <img src="https://source.unsplash.com/400x200?{{ $news->category->name }}" class="img-fluid"
+                                alt="{{ $news->category->name }}">
                             @endif
                         </div>
                     </a>
@@ -116,7 +110,7 @@
                                 <div class="w-more px-3 pb-3">
                                     <small class="text-muted">{{ $news->created_at->diffForHumans() }}</small>
                                 </div>
-                                {{-- <p class="card-text">{{ $news->excerpt }}</p> --}}
+                                <p class="card-text">{{ $news->excerpt }}</p>
                                 <div class="w-more px-3 pb-3">
                                     <a href="/news" class="text-decoration-none">Selengkapnya <span
                                             class="bi bi-arrow-right"></span></a>
@@ -131,6 +125,5 @@
     </div>
 </section>
 <!-- Last News -->
-
 
 @endsection

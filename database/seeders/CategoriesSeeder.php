@@ -17,45 +17,25 @@ class CategoriesSeeder extends Seeder
     {
         $categories = [
             [
-                'name' => 'Teknologi',
-                'slug' => 'teknologi',
+                'name' => 'Pengembangan Perangkat Lunak AI',
+                'slug' => 'pengembangan-perangkat-lunak-ai',
             ],
             [
-                'name' => 'Berita Terkini',
-                'slug' => 'berita-terkini',
+                'name' => 'Manajemen Proyek Teknologi',
+                'slug' => 'manajemen-proyek-teknologi',
             ],
             [
-                'name' => 'Olahraga',
-                'slug' => 'olahraga',
+                'name' => 'Penelitian dan Pengembangan:',
+                'slug' => 'penelitian-pengembangan:',
             ],
             [
-                'name' => 'Kesehatan',
-                'slug' => 'kesehatan',
+                'name' => 'Infrastruktur Teknologi',
+                'slug' => 'infrastruktur-teknologi',
             ],
             [
-                'name' => 'Hiburan',
-                'slug' => 'hiburan',
-            ],
-            [
-                'name' => 'Bisnis',
-                'slug' => 'bisnis',
-            ],
-            [
-                'name' => 'Pendidikan',
-                'slug' => 'pendidikan',
-            ],
-            [
-                'name' => 'Pariwisata',
-                'slug' => 'pariwisata',
-            ],
-            [
-                'name' => 'Sains',
-                'slug' => 'sains',
-            ],
-            [
-                'name' => 'Otomotif',
-                'slug' => 'otomotif',
-            ],
+                'name' => 'Pemasaran dan Komunikasi Teknologi',
+                'slug' => 'pemasaran-komunikasi-teknologi',
+            ]
         ];
 
 

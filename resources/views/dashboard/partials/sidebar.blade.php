@@ -139,49 +139,6 @@
             </ul>
         </li>
 
-        {{-- <li class="nav-item">
-            <a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }} "
-                href="/dashboard/categories">
-                <i class="bi bi-grid"></i>
-                <span>Kategori</span>
-            </a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link {{ Request::is('dashboard/news') ? 'active' : '' }}" href="/dashboard/news">
-                <i class="bi bi-grid"></i>
-                <span>Berita</span>
-            </a>
-        </li>
-
-        <li class="nav-item {{ Request::is('dashboard/prospect') ? 'active' : '' }}">
-            <a class="nav-link " href="/dashboard/prospect">
-                <i class="bi bi-grid"></i>
-                <span>Prospect</span>
-            </a>
-        </li>
-
-        <li class="nav-item {{ Request::is('dashboard/startup*') ? 'active' : '' }}">
-            <a class="nav-link " href="/dashboard/startup">
-                <i class="bi bi-grid"></i>
-                <span>Perusahaan</span>
-            </a>
-        </li>
-
-        <li class="nav-item {{ Request::is('dashboard/work') ? 'active' : '' }}">
-            <a class="nav-link " href="/dashboard/work">
-                <i class="bi bi-grid"></i>
-                <span>Pekerjaan</span>
-            </a>
-        </li>
-
-        <li class="nav-item {{ Request::is('dashboard/apply') ? 'active' : '' }}">
-            <a class="nav-link " href="/dashboard/apply">
-                <i class="bi bi-grid"></i>
-                <span>Lamaran</span>
-            </a>
-        </li> --}}
-
     </ul>
 
 </aside>

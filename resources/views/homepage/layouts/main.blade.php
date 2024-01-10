@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- logo -->
-    <link href="/img/logo/logo-title.png" rel="icon">
+    <link href="/assets/home/img/logo/logo-title.png" rel="icon">
     <title>ANDRO MIND - {{ $title }}</title>
 
     <!-- Bootstrap-->
@@ -21,9 +21,9 @@
     <!-- Akhir Animation Aos -->
 
     <!-- My Style CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/hero.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/assets/home/css/style.css">
+    <link rel="stylesheet" href="/assets/home/css/hero.css">
+    <link rel="stylesheet" href="/assets/home/css/footer.css">
 
     <!-- Akhir Style CSS -->
     <style>
@@ -126,7 +126,7 @@
     <!-- Akhir Back To Top -->
 
     <!-- My Assets Js -->
-    <script src="/js/script.js"></script>
+    <script src="/assets/home/js/script.js"></script>
     <!-- Js Aos -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
